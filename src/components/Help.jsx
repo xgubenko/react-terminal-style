@@ -7,7 +7,8 @@ const Help = () => {
         blog - see Blog page<br></br>
         contact - see Contact page<br></br>
         projects - see Projects page<br></br>
-        main - return to Main page
+        main - return to Main page<br></br>
+        Use arrows &#11014; and &#11015; navigate through the command history
       </p>
       {/* <table>
         <tbody>
