@@ -7,7 +7,31 @@ import blogPosts from "../data/blogPosts";
 const TerminalInput = ({ setHelp }) => {
   const [text, setText] = useState("");
 
-  const commands = ["about", "projects", "contact", "blog", "help", "main"];
+  const commands = [
+    //pages
+    "help",
+    "main",
+    "about",
+    "projects",
+    "contact",
+    "blog",
+    "main",
+    //contacts
+    "telegram",
+    "linkedin",
+    "email",
+    //external sources
+    "react-terminal-style",
+    "webhook-processor",
+  ];
+
+  const externalPages = [
+    "telegram::https://t.me/xgubenko",
+    "linkedin::https://www.linkedin.com/in/gubenko/",
+    "email::mailto:xgubenko@gmail.com",
+    "react-terminal-style::https://github.com/xgubenko/react-terminal-style",
+    "webhook-processor::https://github.com/xgubenko/webhook-processor",
+  ];
   const posts = [];
 
   const navigate = useNavigate();
@@ -54,16 +78,19 @@ const TerminalInput = ({ setHelp }) => {
     }
   };
 
+  const doAutoFocus = window.innerWidth > 500;
+
   const handleKeyDown = (e) => {
     const correct =
       commands.includes(text) || posts.includes(text) ? true : false;
-    if (e.key === "ArrowUp" || e.key === "ArrowDown") {
-      changeCommand(e);
-    } else if (e.key === "Enter") {
+    if (e.key === "ArrowUp" || e.key === "ArrowDown") changeCommand(e);
+    else if (e.key === "Enter") {
       addCommandToHistory(text);
       if (!correct || text === "help") setHelp(true);
       else {
-        if (posts.includes(text)) navigate(text);
+        const link = externalPages.find((x) => x.startsWith(text));
+        if (link !== undefined) window.open(link.split("::")[1]);
+        else if (posts.includes(text)) navigate(text);
         else navigate("/" + text);
       }
     }
@@ -78,29 +105,29 @@ const TerminalInput = ({ setHelp }) => {
   useEffect(() => addBlogPosts(), [posts]);
 
   return (
-    <div className='input'>
-      <div style={{ display: "inline-flex" }}>
+    <>
+      <div className='input'></div>
+      {doAutoFocus ? (
         <input
+          autoFocus
           placeholder=''
           type='text'
-          className='input'
-          style={{
-            outline: "none",
-            background: "transparent",
-            fontSize: "1.5rem",
-            fontFamily: "Inconsolata",
-            width: "30rem",
-            borderColor: "rgba(192, 255, 192, 0.8)",
-            borderWidth: "2px",
-            borderStyle: "solid",
-          }}
-          autoFocus
+          className='input-text'
           onChange={(event) => handleInputChange(event)}
           onKeyDown={(e) => handleKeyDown(e)}
           value={text}
         ></input>
-      </div>
-    </div>
+      ) : (
+        <input
+          placeholder=''
+          type='text'
+          className='input-text'
+          onChange={(event) => handleInputChange(event)}
+          onKeyDown={(e) => handleKeyDown(e)}
+          value={text}
+        ></input>
+      )}
+    </>
   );
 };
 

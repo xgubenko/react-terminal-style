@@ -11,11 +11,11 @@ const BlogPost = () => {
   const params = useParams();
   const post = blogPosts.find((post) => post.slug === params.slug);
   const [help, setHelp] = useState(false);
-  const textItems = post.textArray.map((text) => {
+  const textItems = post.textArray.map((text, index) => {
     return (
-      <>
+      <span key={index}>
         {text} <br></br>
-      </>
+      </span>
     );
   });
 

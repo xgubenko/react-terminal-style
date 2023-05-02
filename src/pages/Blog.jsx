@@ -15,9 +15,9 @@ const Blog = () => {
       <div className='overlay'></div>
       <div className='terminal'>
         <Header />
-        <h1>Software Engineering blog</h1>
+        <h1>Blog</h1>
 
-        {blogPosts.map(({ slug, title, text }, index) => (
+        {blogPosts.map(({ slug, title }, index) => (
           <div key={index}>
             <Link to={slug}>{slug}</Link> {title}
           </div>

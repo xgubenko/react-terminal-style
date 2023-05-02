@@ -13,6 +13,7 @@ const Home = () => {
       <div className='overlay'></div>
       <div className='terminal'>
         <Header />
+        <h1>Main</h1>
         <p className='output'>
           Welcome to my personal page. Here you can find information{" "}
           <Link to='/about'>about</Link> me and my{" "}

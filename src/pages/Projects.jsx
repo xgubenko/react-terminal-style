@@ -17,16 +17,28 @@ const Projects = () => {
         <h1>Projects</h1>
         <p className='output'>
           This exact website:{" "}
-          <Link to='https://github.com'>react-terminal-style</Link>. I
-          definitely enjoyed learning CSS and React tricks while creating this.
+          <a
+            href='https://github.com/xgubenko/react-terminal-style'
+            target='_blank'
+            rel='noreferrer'
+          >
+            react-terminal-style
+          </a>
+          . I learned some CSS and React tricks while creating this.
         </p>
         <p className='output'>
           A tool for mid-term trading:{" "}
-          <Link to='https://github.com'>webhook-processor</Link>. Provides an
-          opportunity to use webhooks from TradingView for orders creation. I
-          used it to trade futures on Finam broker and BTCUSD pair on Binance. I
-          was creating it with intention to trade at higher frequency, but the
-          real latency was up to 5 seconds.
+          <a
+            href='https://github.com/xgubenko/webhook-processor'
+            target='_blank'
+            rel='noreferrer'
+          >
+            webhook-processor
+          </a>
+          . Provides the ability to use TradingView webhooks to execute orders
+          creation. I used it to trade futures on the Finam brokerage and a
+          BTCUSD pair on Binance. I developed it with the intention of trading
+          at higher frequency, but the actual delay was up to 5 seconds.
         </p>
         <ToPage text='main' />
         {help && <Help />}

@@ -15,11 +15,23 @@ const Contact = () => {
         <Header />
         <h1>Contacts</h1>
         <p className='output'>
-          You can reach out to me using{" "}
-          <a href='https://t.me/xgubenko'>telegram</a>: @xgubenko,
+          You can reach out to me using
+          <br></br>
+          <a href='https://t.me/xgubenko' target='_blank' rel='noreferrer'>
+            telegram
+          </a>
+          : @xgubenko,
           <br />
-          <a href='https://www.linkedin.com/in/gubenko/'>linkedin</a>, or try to{" "}
-          <a href='mailto:rusf48@live.ru'>email</a> me.
+          <a
+            href='https://www.linkedin.com/in/gubenko/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            linkedin
+          </a>
+          : /in/gubenko/,
+          <br></br>
+          <a href='mailto:xgubenko@gmail.com'>email</a>: xgubenko@gmail.com.
         </p>
 
         <ToPage text='main' />

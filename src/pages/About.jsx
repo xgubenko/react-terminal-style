@@ -14,6 +14,7 @@ const About = () => {
       <div className='overlay'></div>
       <div className='terminal'>
         <Header />
+        <h1>About</h1>
         <p className='output'>
           Hi! My name is Aleksandr Gubenko.
           <br></br>&emsp;I am a software engineer working on web applications
@@ -23,9 +24,9 @@ const About = () => {
           <br></br>&emsp;Here you can find out how to{" "}
           <Link to='/contact'>contact</Link> me. Feel free to ask questions and
           leave feedback.
-          <br></br>&emsp;I am looking for a Backend / Full Stack Developer
-          position in an interesting and in-demand project. I would also like to
-          share knowledge about technologies, work and business processes.
+          <br></br>&emsp;I can advise you as a backend/full stack developer if
+          your project team needs help. I would also like to share knowledge
+          about technologies, work and business processes.
         </p>
         <ToPage text='main' />
         {help && <Help />}
