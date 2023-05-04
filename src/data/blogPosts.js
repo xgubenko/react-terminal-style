@@ -1,5 +1,17 @@
 const blogPosts = [
   {
+    slug: "04-05-2023",
+    title: "Install Let's Encrypt on Linux Ubuntu",
+    textArray: [
+      "Steps to obtain free trusted certificate with automated update:",
+      "1. Update Package manager: sudo apt update && sudo apt upgrade -y",
+      "2. Install Certbot: sudo apt install certbot python3-certbot-nginx",
+      "3. Check Nginx config and restart the server: sudo nginx -t; sudo systemctl reload nginx",
+      "4. Install SSL certificate: sudo certbot --nginx -d example.com -d www.example.com",
+      "5. Check Certbot timer: sudo systemctl status certbot.timer",
+    ],
+  },
+  {
     slug: "26-04-2023",
     title: "Steps of React App deployment",
     textArray: [
