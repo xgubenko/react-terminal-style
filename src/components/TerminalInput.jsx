@@ -81,17 +81,18 @@ const TerminalInput = ({ setHelp }) => {
   const doAutoFocus = window.innerWidth > 500;
 
   const handleKeyDown = (e) => {
+    const tempText = text.trim();
     const correct =
-      commands.includes(text) || posts.includes(text) ? true : false;
+      commands.includes(tempText) || posts.includes(tempText) ? true : false;
     if (e.key === "ArrowUp" || e.key === "ArrowDown") changeCommand(e);
     else if (e.key === "Enter") {
-      addCommandToHistory(text);
-      if (!correct || text === "help") setHelp(true);
+      addCommandToHistory(tempText);
+      if (!correct || tempText === "help") setHelp(true);
       else {
-        const link = externalPages.find((x) => x.startsWith(text));
+        const link = externalPages.find((x) => x.startsWith(tempText));
         if (link !== undefined) window.open(link.split("::")[1]);
-        else if (posts.includes(text)) navigate(text);
-        else navigate("/" + text);
+        else if (posts.includes(tempText)) navigate(tempText);
+        else navigate("/" + tempText);
       }
     }
   };
