@@ -1,3 +1,5 @@
+https://img.shields.io/github/license/xgubenko/react-terminal-style
+
 A simple personal website developed using ReactJS.
 
 # react-terminal-style
