@@ -1,4 +1,4 @@
-https://img.shields.io/github/license/xgubenko/react-terminal-style
+[![License](https://img.shields.io/github/license/saveourtool/save-cloud)](https://github.com/xgubenko/react-terminal-style/blob/main/LICENSE)
 
 A simple personal website developed using ReactJS.
 
