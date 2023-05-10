@@ -3,37 +3,15 @@ const Help = () => {
     <>
       <p className='output'>
         Available commands:<br></br>
-        about - see About page<br></br>
-        blog - see Blog page<br></br>
-        contact - see Contact page<br></br>
-        projects - see Projects page<br></br>
-        main - return to Main page<br></br>
+        about - see my info<br></br>
+        blog - list available blog posts<br></br>
+        dd-mm-yyyy - read blog post<br></br>
+        books - list software development books I recommend you to read<br></br>
+        contact - to contact page<br></br>
+        projects - list pet projects<br></br>
+        main - return to main page<br></br>
         Use arrows &#11014; and &#11015; navigate through the command history
       </p>
-      {/* <table>
-        <tbody>
-          <tr>
-            <td>about</td>
-            <td> - To About Page</td>
-          </tr>
-          <tr>
-            <td>contact</td>
-            <td> - To Contacts Page</td>
-          </tr>
-          <tr>
-            <td>blog</td>
-            <td> - To Blog Page</td>
-          </tr>
-          <tr>
-            <td>blog</td>
-            <td> - To Blog Page</td>
-          </tr>
-          <tr>
-            <td>blog</td>
-            <td> - To Blog Page</td>
-          </tr>
-        </tbody>
-      </table> */}
     </>
   );
 };

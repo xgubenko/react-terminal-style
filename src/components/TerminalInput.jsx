@@ -12,6 +12,7 @@ const TerminalInput = ({ setHelp }) => {
     "help",
     "main",
     "about",
+    "books",
     "projects",
     "contact",
     "blog",

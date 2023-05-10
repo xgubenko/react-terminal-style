@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Projects from "./pages/Projects";
+import Books from "./pages/Books";
 function App() {
   return (
     <div className='App'>
@@ -18,6 +19,7 @@ function App() {
           <Route path='/blog' element={<Blog />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/blog/:slug' element={<BlogPost />} />
+          <Route path='/books' element={<Books />} />
           <Route exact path='/' element={<Navigate to='/main' />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
