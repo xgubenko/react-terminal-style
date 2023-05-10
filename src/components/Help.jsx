@@ -10,7 +10,7 @@ const Help = () => {
         contact - to contact page<br></br>
         projects - list pet projects<br></br>
         main - return to main page<br></br>
-        Use arrows &#11014; and &#11015; navigate through the command history
+        Use arrows &#11014; and &#11015; to navigate through the command history
       </p>
     </>
   );
