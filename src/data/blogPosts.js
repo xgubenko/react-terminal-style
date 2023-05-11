@@ -22,7 +22,7 @@ const blogPosts = [
       "3. Install dependencies, create production build: npm install, npm run build",
       "4. Install nginx to serve static content: sudo apt install nginx",
       "5. Use /etc/nginx/nginx.conf to configure location",
-      "6. In case if port 80 or 443 isn't available, you may have a firewall issue: firewall-cmd --zone=public --add-port=80/tcp",
+      "6. In case if port 80 or 443 isn't available, you may have a firewall issue: firewall-cmd --zone=public --add-port=80/tcp or sudo ufw allow 80",
     ],
   },
 ];
