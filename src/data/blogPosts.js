@@ -1,7 +1,7 @@
 const blogPosts = [
   {
     slug: "11-05-2023",
-    title: "Continuous delivery with Github webhooks",
+    title: "Continuous Delivery with Github Webhooks",
     textArray: [
       "I spent few hours to automate deployment of this website, these are the steps for implementing it on any other repository:",
       "1. Open your repository -> settings -> Webhooks",
@@ -27,7 +27,7 @@ const blogPosts = [
   },
   {
     slug: "26-04-2023",
-    title: "Steps of React App deployment",
+    title: "Steps of React App Deployment",
     textArray: [
       "Basic deployment steps for React App deployment on Ubuntu:",
       "1. Add  repository and install node: curl -fsSL https://deb.nodesource.com/setup_current.x | bash - &&\\ apt-get install -y nodejs",
