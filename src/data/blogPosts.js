@@ -9,7 +9,8 @@ const blogPosts = [
       "3. Prepare a shell script that you use for manual deployment",
       "4. On a server, clone my deployment-webhook-controller",
       "5. Edit application.yml or add variables in case if you want to change default application port, script path, secret",
-      "6. Run the server using: nohup sh runwebhook.sh &, check server status with: ps -A |grep java",
+      "3. Prepare a shell script <runwebhook.sh> to start the webhook server: mvn spring-boot:run",
+      "6. Run the server using: nohup sh <runwebhook.sh> &, check server status with: ps -A |grep java",
     ],
   },
   {
